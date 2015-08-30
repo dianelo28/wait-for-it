@@ -1,0 +1,68 @@
+body{
+	background: 
+		linear-gradient(
+			rgba(0, 0, 0, 0.5), 
+			rgba(0, 0, 0, 0.5)
+		),
+	url('https://images.unsplash.com/32/Mc8kW4x9Q3aRR3RkP5Im_IMG_4417.jpg?q=80&fm=jpg&s=eb2a21cc0655327e3295d3426e805607');
+	background-repeat: no-repeat;
+	background-position: fixed;
+	background-size: cover;
+}
+
+
+
+map{
+	height: 100vh;
+	width: 100%;
+	margin-top: -620px;
+}
+
+h1{
+	font-family: 'Rammetto One', cursive;	
+	color: white;
+}
+
+h4{
+	font-family: 'Galdeano', sans-serif;
+}
+
+.name{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	color: white;
+	background: inherit;
+	opacity: .7
+}
+
+.name:hover{
+	opacity: 1;
+	color: white;
+	cursor: default;
+}
+
+.name a{
+	color: white;
+}
+
+small{
+	font-size: smaller
+}
+
+.form-control{
+	margin-bottom: 15px;
+}
+
+.form-inline{
+	height: 200px;
+	overflow: auto
+}
+
+.wait{
+	margin-bottom: 10px;
+}
+
+#list{
+	height: 100vh;
+	overflow: auto
+}
