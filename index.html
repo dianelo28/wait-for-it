@@ -39,10 +39,10 @@
 
   <div class="container-fluid">
     <div class="col-sm-12">
-      <div class="col-sm-5 pull-left" id="list">
+      <div class="col-sm-4 pull-left" id="list">
         <input type="search" ng-model="q" placeholder="filter neighborhood, name, etc..." class="form-control" /> 
-        <div ng-repeat="marker in markers | orderBy:'name'|filter:q as results" class="well name" >
-        <a href='javascript:void(0)' ng-click="show = !show"><h4>{{marker.name}}</h4></a>
+        <div ng-repeat="marker in markers | orderBy:'name'|filter:q as results" class="well name">
+        <a href='javascript:void(0)' ng-click="show = !show ; showInfoWindow(event, marker)"><h4>{{marker.name}}</h4></a>
 
           <form ng-submit="submitWait(marker, newWait)" class="form-inline" ng-show="show">
             <input type="text" ng-model="newWait" class="form-control" placeholder="How long is your wait?">
@@ -58,9 +58,9 @@
       </div> <!-- col-sm-3 list of restaurants -->
 
 
-      <div class="col-sm-7 pull-right">
+      <div class="col-sm-8 pull-right">
           <map center="37.763830, -122.444813" zoom="13">
-            <marker ng-repeat="marker in markers" position="{{marker.lat}},{{marker.long}}" on-click="showInfoWindow(event, marker)"></marker>
+            <marker ng-repeat="marker in markers |filter:q as results" position="{{marker.lat}},{{marker.long}}" on-click="showInfoWindow(event, marker)"></marker>
           </map>
       </div><!-- map col-sm-9 -->
 

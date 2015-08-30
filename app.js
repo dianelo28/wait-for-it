@@ -126,6 +126,96 @@ angular.module('Wait', ['ngMap', 'angularMoment', 'ngRoute'])
 			hood: "Lower Nob Hill",
 			wait: [{text: "5 people ahead of me, one group of 4 behind me",
 			       time: new Date ()}]
+			},
+			{
+			lat: 37.7836624,  
+			long: -122.4330995,
+			name: "State Bird Provisions",
+			addr: "1529 Fillmore St., San Francisco, CA 94115",
+			hood: "Western Addition",
+			wait: [{text: "Lines around the block!",
+			       time: new Date ()}]
+			},
+			{
+			lat: 37.7787375,   
+			long: -122.4089742,
+			name: "Blue Bottle - Ferry Building",
+			addr: "1 #7 Ferry Bldg Marketplace, San Francisco, CA 94111",
+			hood: "Embarcadero",
+			wait: [{text: "Long line, but moving fast!",
+			       time: new Date ()}]
+			},
+			{
+			lat: 37.7747924,   
+			long: -122.4375633,
+			name: "Bi-Rite Creamery - Divisadero",
+			addr: "550 Divisadero St., San Francisco, CA 94117",
+			hood: "Nopa",
+			wait: [{text: "It's a hot day, and the line's insane",
+			       time: new Date ()}]
+			},
+			{
+			lat: 37.7681363,   
+			long: -122.4247061,
+			name: "Mission Beach Cafe",
+			addr: "198 Guerrero St., San Francisco, CA 94103",
+			hood: "Mission",
+			wait: [{text: "Everyone's at BM no line!",
+			       time: new Date ()}]
+			},
+			{
+			lat: 37.7829048,   
+			long: -122.4625607,
+			name: "Burma Superstar",
+			addr: "309 Clement St., San Francisco, CA 94118",
+			hood: "Inner Richmond",
+			wait: [{text: "Seated right away!",
+			       time: new Date ()}]
+			},
+			{
+			lat: 37.7858612,   
+			long: -122.4065457,
+			name: "Apple Store - New Product Release Days",
+			addr: "1 Stockton St., San Francisco, CA 94108",
+			hood: "Union Square",
+			wait: [{text: "Madness!",
+			       time: new Date ()}]
+			},
+			{
+			lat: 37.7637365,   
+			long: -122.4691241,
+			name: "San Tung",
+			addr: "1031 Irving St., San Francisco, CA 94122",
+			hood: "Inner Sunset",
+			wait: [{text: "They told me 30 min, but the wings are worth it!",
+			       time: new Date ()}]
+			},
+			{
+			lat: 37.7876564,   
+			long: -122.4182519,
+			name: "Mr. Holmes Bakehouse",
+			addr: "1042 Larkin St., San Francisco, CA 94109",
+			hood: "Tenderloin",
+			wait: [{text: "10 people ahead of me, I've been here for about 10 minutes",
+			       time: new Date ()}]
+			},
+			{
+			lat: 37.7525656,   
+			long: -122.4153353,
+			name: "Wise Sons Jewish Delicatessen",
+			addr: "3150 24th St., San Francisco, CA 94110",
+			hood: "Mission",
+			wait: [{text: "5 people ahead of me, line hasn't moved in 15 minutes!",
+			       time: new Date ()}]
+			},
+			{
+			lat: 37.7964008,   
+			long: -122.4068865,
+			name: "Golden Gate Bakery",
+			addr: "1029 Grant Ave., San Francisco, CA 94133",
+			hood: "Chinatown",
+			wait: [{text: "http://www.is-the-golden-gate-bakery-open-today.com/ - closed today :(",
+			       time: new Date ()}]
 			}
 		];
 
@@ -155,7 +245,10 @@ angular.module('Wait', ['ngMap', 'angularMoment', 'ngRoute'])
 
 	            infowindow.setPosition(center);
 	            infowindow.open($scope.objMapa);
+	            $scope.objMapa.setZoom(15);
+	            $scope.objMapa.setCenter(center);
 	         };
+
 
 	  //   $scope.message = {
   	// 		text: 'I was told 5 minutes for 2.',
